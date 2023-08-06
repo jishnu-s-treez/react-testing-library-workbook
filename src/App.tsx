@@ -1,12 +1,15 @@
-import Greet from "./components/greet/Greet";
-import "./App.css";
+import { AppProviders } from "./providers/app-providers"
+import MuiMode from "./components/mui/MuiMode"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <Greet />
-    </div>
-  );
+    <AppProviders>
+      <div className="App">
+                        <MuiMode />
+      </div>
+    </AppProviders>
+  )
 }
 
-export default App;
+export default App
