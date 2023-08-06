@@ -114,6 +114,6 @@ describe("Application test", () => {
     // role = 'button' for button element
     const buttonElement = screen.getByRole("button")
     expect(buttonElement).toBeInTheDocument()
-    expect(buttonElement).not.toBeEnabled()
+    expect(buttonElement).toBeDisabled()
   })
 })
