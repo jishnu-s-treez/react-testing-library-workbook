@@ -59,7 +59,6 @@ The repository includes several examples that cover different aspects of testing
               expect(textElement).toBeInTheDocument();
               });
 
-
     All you need is a 'test' method which triggers a test, were it accepts 3 arguments such as name, function and timeout `test(name,fn,timeout)`.
 
     1. name : The test name is used to identify the test
@@ -77,11 +76,11 @@ The repository includes several examples that cover different aspects of testing
     1. **--coverage** : Helps to identify script which we called is for coverage purposes.
     2. **--collectCoverageFrom** : Will determine the script were to look into and were not to.
 
-
     Here, we told jest to cover the whole components directory and its child directories along with the typescript files includes in it.
 
         "coverage": "npm test -- --coverage --watchAll --collectCoverageFrom='!src/components/**/*.{types,stories,constants,tests,specs}.{ts,tsx}'"
-    `!` in __--collectCoverageFrom__ will helps the script to ignore the dir.
+
+    `!` in **--collectCoverageFrom** will helps the script to ignore the dir.
 
 ## Contributing
 
