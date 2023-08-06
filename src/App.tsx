@@ -6,7 +6,7 @@ function App() {
   return (
     <AppProviders>
       <div className="App">
-                        <MuiMode />
+        <MuiMode />
       </div>
     </AppProviders>
   )
