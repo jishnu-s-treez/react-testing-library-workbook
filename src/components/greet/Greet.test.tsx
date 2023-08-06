@@ -1,15 +1,15 @@
-import React from 'react';
-import { render, screen } from "@testing-library/react";
-import Greet from "./Greet";
+import React from "react"
+import { render, screen } from "@testing-library/react"
+import Greet from "./Greet"
 
 /**
  * * Individual test
  */
 test("Renders greetings message (Individual test)", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
-  expect(textElement).toBeInTheDocument();
-});
+  render(<Greet />)
+  const textElement = screen.getByText(/hello/i)
+  expect(textElement).toBeInTheDocument()
+})
 
 /**
  * * Will use describe for grouping the tests
@@ -17,10 +17,10 @@ test("Renders greetings message (Individual test)", () => {
 
 describe("Greet", () => {
   test("Renders greetings message", () => {
-    render(<Greet />);
-    const textElement = screen.getByText(/hello/i);
-    expect(textElement).toBeInTheDocument();
-  });
+    render(<Greet />)
+    const textElement = screen.getByText(/hello/i)
+    expect(textElement).toBeInTheDocument()
+  })
 
   /**
    * * .only will run the particular test and excludes everyother cases
@@ -40,22 +40,22 @@ describe("Greet", () => {
      * * .skip will helps to skip the particular test
      */
     test.skip("Nested greet", () => {
-      render(<Greet />);
-      const textElement = screen.getByText("Hello");
-      expect(textElement).toBeInTheDocument();
-    });
-  });
-});
+      render(<Greet />)
+      const textElement = screen.getByText("Hello")
+      expect(textElement).toBeInTheDocument()
+    })
+  })
+})
 
 describe("Greet v2", () => {
   /**
    * * Instead of test keyword we can use 'it' as well
    */
   it("Checks for case un-sensitive word (/Hello/i)", () => {
-    render(<Greet />);
-    const textElement = screen.getByText(/Hello/i);
-    expect(textElement).toBeInTheDocument();
-  });
+    render(<Greet />)
+    const textElement = screen.getByText(/Hello/i)
+    expect(textElement).toBeInTheDocument()
+  })
 
   /**
    * * Alternative for .only property in 'it' (use 'f' infront of 'it')
@@ -70,8 +70,8 @@ describe("Greet v2", () => {
    * * Alternative for .skip property in 'it' (use 'x' infront of 'it')
    */
   xit("Checks letter o", () => {
-    render(<Greet />);
-    const textElement = screen.getByText(/o/i);
-    expect(textElement).toBeInTheDocument();
-  });
-});
+    render(<Greet />)
+    const textElement = screen.getByText(/o/i)
+    expect(textElement).toBeInTheDocument()
+  })
+})
