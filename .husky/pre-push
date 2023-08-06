@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run test suites, check for errors and push the code to origin
+if [ "$BYPASS_TESTS" != "true" ]; then
+  npm run test -- --watchAll=false
+
+  # Check the exit code of the test command
+  TEST_EXIT_CODE=$?
+  if [ $TEST_EXIT_CODE -ne 0 ]; then
+    echo "Tests failed, but BYPASS_TESTS=true. Pushing the code."
+    exit 0
+  fi
+fi
+
+# If BYPASS_TESTS variable is set to true, then push directly without running the test suites.
+exit 0
